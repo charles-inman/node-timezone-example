@@ -1,0 +1,38 @@
+# Use root/example as user/password credentials
+
+version: '3.1'
+services:
+  db:
+    image: mysql:8.0.19
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: testapp
+    ports:
+      - "3308:3306"
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  web:
+    image: labs-web
+    ports:
+      - "3000:3000"
+    depends_on:
+       - api
+    environment:
+      SERVER: api
+    links:
+     - api:api
+  api:
+    image: labs-api
+    ports:
+      - "4000:4000"
+    environment:
+      SERVER: db
+      DB_PORT: 3306
+    links:
+      - db:db
+    depends_on:
+      - db

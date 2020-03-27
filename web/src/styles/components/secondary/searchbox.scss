@@ -1,0 +1,20 @@
+@import '../../palette';
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: relative;
+
+  label {
+    padding-right: 1em;
+    font-weight: bold;
+  }
+
+  .error {
+    position: absolute;
+    bottom: 0;
+    color: $ALERT;
+    font-weight: bold;
+  }
+}

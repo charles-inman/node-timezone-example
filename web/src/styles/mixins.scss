@@ -1,0 +1,13 @@
+@mixin standard-shadow {
+    box-shadow: 0px 0px 4px 0px $GRAY_DARK;
+}
+
+@mixin standard-margin {
+    margin: 1em;
+}
+
+@mixin align-child-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

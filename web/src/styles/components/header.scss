@@ -1,0 +1,41 @@
+
+@import '../fonts';
+@import '../palette';
+@import '../mixins.scss';
+
+header {
+  @include standard-shadow;
+
+  height: 60px;
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-menu {
+      display: flex;
+      align-items: center;
+      button {
+        cursor: pointer;
+      }
+    }
+
+    .side-menu-control {
+      border: 0;
+      width: 50px;
+
+      i {
+        font-size: 2em;
+      }
+    }
+
+  }
+
+  .profile-picture {
+      i {
+        font-size: 2.5em;
+        margin-right: 0.5em;
+      }
+  }
+}

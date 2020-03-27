@@ -1,0 +1,15 @@
+# OSX
+#
+.DS_Store
+
+
+
+# node.js
+#
+api/node_modules/
+api/.idea
+web/node_modules/
+web/.idea
+web/.next
+npm-debug.log
+yarn-error.log
