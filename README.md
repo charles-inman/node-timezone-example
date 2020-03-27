@@ -30,19 +30,19 @@ cd web && yarn install
 
 Open 3 Consoles - open in the root project folder
 
-####WEB
+###WEB
 ```
 cd web && yarn dev
 
 ```
 
-####API
+###API
 ```
 cd api && npm start
 
 ```
 
-####Database Mysql
+###Database Mysql
 ```
 cd api && docker-compose -f "docker-db.yml" up
 
@@ -50,7 +50,7 @@ cd api && docker-compose -f "docker-db.yml" up
 
 ## Running the tests
 
-No current tests - Code is written in a way that is easy to test
+No current tests, Code is written in a way that's easy to test
 Example
 ```
 	import React from "react";
